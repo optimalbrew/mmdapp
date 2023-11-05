@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+# Intro Metamask dapp React + TypeScript + Vite
+
+Started with the boilerplate example and added a erc20 transfer example for state changing call. The rest of the readme is from the starter example, 
+unfortunately not a fork. Started as vite template following https://docs.metamask.io/wallet/tutorials/react-dapp-local-state/
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
