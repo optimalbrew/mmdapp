@@ -48,22 +48,6 @@ const App = () => {
     }
   }, [])
 
-  /**
-   * 
-   * params: [
-  {
-    from: '0x5145def5C916E5910EB965dF98B6C6e6B4767bD3',
-    to: '0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE',
-    gas: ''0xea60'', // 60000
-    gasPrice: '0x3ec0740', // 65800000
-    value: '0x00', //
-    data:
-      '0xa9059cbb000000000000000000000000c24e99b842D2F4bb0738D23695A0141216f17eAE0000000000000000000000000000000000000000000000000de0b6b3a7640000',  
-  },
-]
-
-   */
-
 
   const updateWallet = async (accounts: any) => {
     const balance = formatBalance(await window.ethereum!.request({
@@ -100,7 +84,6 @@ const App = () => {
     .then((accounts:[]) => {                            /* New */
       setError(false)                                   /* New */
       updateWallet(accounts)                            /* New */
-      transferRIF()
     })                                                  /* New */
     .catch((err:any) => {                               /* New */
       setError(true)                                    /* New */
@@ -137,6 +120,11 @@ const App = () => {
           </div>
         )
       }
+
+      <div>
+        <br></br>
+        <button disabled={disableConnect} onClick={transferRIF}>Transfer RIF</button>
+      </div>
     </div>
   )
 }
